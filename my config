@@ -135,7 +135,7 @@ in
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.wellerbp = {
+  users.users.jaminW55 = {
     isNormalUser = true;
     description = "jaminW";
     shell = pkgs.fish;
