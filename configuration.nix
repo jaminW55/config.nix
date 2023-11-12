@@ -16,12 +16,6 @@ in
       aagl-gtk-on-nix.module
     ];
 
-  #AAGL Related Programs
-  programs.anime-game-launcher.enable = true;
-  programs.anime-borb-launcher.enable = false;
-  programs.honkers-railway-launcher.enable = true;
-  programs.honkers-launcher.enable = false;
-
   nix.settings = {
     substituters = [ "https://ezkea.cachix.org" ];
     trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" ];
@@ -55,19 +49,8 @@ in
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  programs.fish.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Special Program Enablement
-  programs.dconf.enable = true;
-  programs.gamemode.enable = true;
-  programs.partition-manager.enable = true;
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-  };
 
   #Services Disabled
   services.flatpak.enable = false;
