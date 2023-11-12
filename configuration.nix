@@ -41,51 +41,6 @@ in
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "America/New_York";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.supportedLocales = [
-    "en_US.UTF-8/UTF-8"
-    "ja_JP.UTF-8/UTF-8"
-  ];
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
-  i18n.inputMethod = {
-      enabled = "fcitx5";
-      fcitx5.addons = with pkgs; [
-          fcitx5-mozc
-          fcitx5-gtk
-      ];
-  };
-
-  environment.sessionVariables = {
-    XMODIFIERS = "@im=fcitx";
-    QT_IM_MODULE = "fcitx";
-    GTK_IM_MODULE = "fcitx";
-  };
-
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    liberation_ttf
-    source-han-sans-japanese
-    source-han-serif-japanese
-  ];
-
   # List services that you want to enable:
 
   # Enable Samba
@@ -123,8 +78,6 @@ in
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
@@ -134,67 +87,10 @@ in
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jaminW55 = {
-    isNormalUser = true;
-    description = "jaminW";
-    shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
-  };
   programs.fish.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    alsa-utils
-    anki
-    brave
-    btop
-    citra-canary
-    discord
-    direnv # vscode extension
-    # distrobox
-    firefox
-    fish
-    gazou
-    gimp
-    git
-    gnutls
-    kate
-    komikku
-    libsForQt5.kcalc
-    libsForQt5.kolourpaint
-    # libsForQt5.kmail
-    # libsForQt5.kwalletmanager
-    lutris
-    mangohud
-    # manjiDict
-    neofetch
-    nvtop-amd
-    obs-studio
-    obsidian
-    onlyoffice-bin
-    pciutils
-    protonup-qt
-    telegram-desktop
-    thunderbird
-    vim
-    vlc
-    vscode
-    winetricks
-    wineWowPackages.stable
-    xdg-user-dirs
-    xivlauncher
-    # xorg.xhost
-    yuzu-mainline
-    zoom-us
-    zotero
-  ];
 
   # Special Program Enablement
   programs.dconf.enable = true;
