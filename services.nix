@@ -29,6 +29,7 @@
   };
 
   # Desktop Environments and Display Managers
+  # Plasma KDE
   services.xserver = {
     enable = true;
     layout = "us";
@@ -37,7 +38,8 @@
       sddm.enable = true;
     };
     desktopManager = {
-      plasma5.enable = true;
+      plasma5.enable = true; # Enable KDE Plasma
+  #    plasma5.wayland = true; # Enable X12 Support
     };
   };
 
