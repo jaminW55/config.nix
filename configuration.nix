@@ -36,9 +36,6 @@ in
   # Enable Samba
   # services.samba.enableWinbindd = true;
 
-  # Enable OpenSSH
-  services.openssh.enable = true;
-
   # Enable X11 Windowing System
   services.xserver.enable = true;
 
