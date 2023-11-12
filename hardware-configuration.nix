@@ -66,7 +66,9 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
  
    systemd.tmpfiles.rules = [
-    "L+	/opt/rocm/hip	-	-	-	-	${pkgs.hip}"
+    # "L+	/opt/rocm/hip	-	-	-	-	${pkgs.hip}"
+    # https://github.com/nixos-rocm/nixos-rocm
+    "L+	/opt/rocm/hip	-	-	-	-	${pkgs.rocmPackages.clr}"
   ];
   
   # Additional OpenGL Packages
