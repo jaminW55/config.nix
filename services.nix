@@ -31,15 +31,19 @@
   # Desktop Environments and Display Managers
   # Plasma KDE
   services.xserver = {
-    enable = true;
-    layout = "us";
-    xkbVariant = "";
+    enable = true; # Enable X11 windowing system for fallback or X11 applications
+    layout = "us"; # Keyboard layout for X11 sessions
+    xkbVariant = ""; # Keyboard variant for X11 sessions
     displayManager = {
-      sddm.enable = true;
+      sddm.enable = true; # Plasma Enable 
+  #    gdm.enable = false; # Gnome Enable
+  #    defaultSession = ""; # "gnome-xorg" for X11 ; "gnome" for Wayland
     };
     desktopManager = {
       plasma5.enable = true; # Enable KDE Plasma
-  #    plasma5.wayland = true; # Enable X12 Support
+  #    plasma5.wayland = true; # Enable X12 Support for Plasma
+  #    gnome3.enable = false; # Enable GNOME
+  #    gnome3.wayland = true; # Enable X12 Support for GNOME
     };
   };
 
@@ -56,8 +60,13 @@
     };
   };
 
+
   # Users and groups can also be managed here if related to services,like adding users to the Docker group, etc.
 
   # Define any additional services here.
-  
+  #
+
+  # Services Disabled
+  services.flatpak.enable = false;
+
 }
