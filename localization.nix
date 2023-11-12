@@ -30,6 +30,12 @@
     ];
   };
 
+  environment.sessionVariables = {
+    XMODIFIERS = "@im=fcitx";
+    QT_IM_MODULE = "fcitx";
+    GTK_IM_MODULE = "fcitx";
+  };
+
   # Font configuration
   fonts = {
     enableFontDir = true;
