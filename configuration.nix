@@ -26,30 +26,11 @@
   # Enable Samba
   # services.samba.enableWinbindd = true;
 
-  # Enable X11 Windowing System
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
-
-  # Enable the Plasma 5 Desktop Environment
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  #Services Disabled
-  services.flatpak.enable = false;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
