@@ -30,12 +30,6 @@
     ];
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-
   environment.sessionVariables = {
     XMODIFIERS = "@im=fcitx";
     QT_IM_MODULE = "fcitx";
