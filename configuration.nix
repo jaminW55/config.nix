@@ -8,6 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # Imports Modules
+      ./nixos-modules/packages.nix
+      ./nixos-modules/localization.nix
+      ./nixos-modules/programs.nix
+      ./nixos-modules/services.nix
+      ./nixos-modules/users.nix
       # AAGL Launcher
       aagl-gtk-on-nix.module
     ];
