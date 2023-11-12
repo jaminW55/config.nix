@@ -3,11 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-let
-  aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
-  gazou = pkgs.callPackage "/home/jaminW55/Documents/Nix Packages/Gazou Nix/gazou.nix" {};
-  # manjiDict = pkgs.callPackage "/home/jaminW5/Documents/Nix Packages/Manji Dict/manjiDict.nix" {};
-in
+
 {
   imports =
     [ # Include the results of the hardware scan.
