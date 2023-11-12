@@ -6,7 +6,8 @@
   programs.gamemode.enable = true; # GameMode
   programs.partition-manager.enable = true; # Partition Manager
   programs.fish.enable = true; # Fish Shell
-  programs.steam = { # Configuration for the Steam Program
+  programs.steam = { 
+    # Configuration for the Steam Program
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
   };
