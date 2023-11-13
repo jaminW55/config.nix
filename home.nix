@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  # Define username and home directory (replace 'jdoe' with your actual username)
-  home.username = "wellerbp";
-  home.homeDirectory = "/home/wellerbp";
+  # Define Username and Home Directory
+  home.username = "$User";
+  home.homeDirectory = "/home/$User";
 
   # Set the Home Manager state version
   home.stateVersion = "23.05"; # Set this to the version you're using
@@ -11,25 +11,24 @@
   # Enable Home Manager for the user
   programs.home-manager.enable = true;
 
-  # Locale and timezone settings
-  time.timeZone = "America/New_York";
-  i18n.defaultLocale = "en_US.UTF-8";
-
   # Define user packages
   home.packages = with pkgs; [
     # User-specific applications
     anki
     citra-canary
     discord
+    japanesePackages.gazou
+    japanesePackages.tachidesk
+    kommiku
     lutris
     obsidian
     protonup-qt
     ryujinx
     thunderbird
+    wine trucks
     wineWowPackages.stable
     yuzu-mainline
     zotero
-    # ... and any other user-specific packages
   ];
 
   # Shell configuration
