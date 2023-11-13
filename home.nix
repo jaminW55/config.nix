@@ -27,6 +27,7 @@
     thunderbird
     wine trucks
     wineWowPackages.stable
+    xivlauncher
     yuzu-mainline
     zotero
   ];
