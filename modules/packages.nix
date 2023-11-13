@@ -12,11 +12,8 @@ in
   environment.systemPackages = with pkgs; [
     # System utilities
     alsa-utils
-    anki
     btop
-    citra-canary
     deluge
-    discord
     direnv # vscode extension
     firefox
     fish
@@ -24,13 +21,8 @@ in
     git
     glib
     gnutls
-    japanesePackages.gazou
-    japanesePackages.tachidesk
     kate
-    komikku
-    lutris
     mangohud
-    # manjiDict
     mesa
     neofetch
     nodejs # Docker Support; Java Framework Support
@@ -40,11 +32,9 @@ in
     obsidian
     onlyoffice-bin
     pciutils
-    protonup-qt
     python310 
     python310Packages.pip
     python310Packages.virtualenv
-    ryujinx
     shortwave
     spotify
     telegram-desktop
@@ -53,13 +43,8 @@ in
     vim
     vlc
     vscode # General Code Writer; Configuration Management; Docker Support
-    winetricks
-    wineWowPackages.stable
     xdg-user-dirs
-    xivlauncher
     # xorg.xhost
     yarn # Docker Support; Java Dependency Manager
-    yuzu-mainline
-    zotero
   ];
 }
