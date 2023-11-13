@@ -35,13 +35,40 @@
   # Before changing this value read the documentation for this option: (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 
-  # Commented-out settings for specific services and programs. Uncomment as needed.
-  # services.samba.enableWinbindd = true;    # Samba service for file sharing
-  # programs.mtr.enable = true;              # MTR for network diagnostics
-  # programs.gnupg.agent = {                 # GnuPG agent for cryptographic operations
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-  # Remove or uncomment media-session if you have specific configurations for it
-  # media-session.enable = true;
+  # User account definitions
+  users.users = {
+    $User = {
+      isNormalUser = true;
+      description = "$User Name";
+      home = "/home/$User";
+      shell = pkgs.fish;
+      extraGroups = [ "wheel" "networkmanager" "docker" ]; # Additional groups for the user
+      # User-specific packages can also be managed here, if necessary
+      packages = with pkgs; [
+        anki
+        citra-canary
+        discord
+        japanesePackages.gazou
+        japanesePackages.tachidesk
+        kommiku
+        lutris
+        obsidian
+        protonup-qt
+        ryujinx
+        thunderbird
+        wine trucks
+        wineWowPackages.stable
+        xivlauncher
+        yuzu-mainline
+        zotero
+      ];
+    };
+
+  # Global User Settings
+  users.defaultUserShell = pkgs.fish;
+
+  # Global User Groups
+  users.groups = {
+    docker = {};
+
 }
