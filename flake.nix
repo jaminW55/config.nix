@@ -25,8 +25,9 @@
         pkgs = import nixpkgs {
           inherit system;
           overlays = [ overlay ];
+          # Allow the installation of unfree packages not included in the open-source license
           config = {
-            allowUnfree = true;
+            allowUnfree = true; 
             # Add Other Global Nixpkgs Options
           };
         };
