@@ -72,10 +72,10 @@ in
     new-wayland-protocols  # Wayland protocol extensions
     obs-wlrobs             # An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
     rootbar                # A bar for Wayland WMs
-    roft-wayland           # Window switcher, run dialog and dmenu replacement for Wayland
+    rofi-wayland           # Window switcher, run dialog and dmenu replacement for Wayland
     # salut                  # A sleek notification daemon
-    shotman                # The uncompromising screenshot GUI for Wayland compositors
-    sirula                 # Simple app launcher for wayland written in rust
+    # shotman                # The uncompromising screenshot GUI for Wayland compositors
+    # sirula                 # Simple app launcher for wayland written in rust
     slurp                  # Select a region in a Wayland compositor
     # sway-unwrapped         # An i3-compatible tiling Wayland compositor
     # swaybg                 # Wallpaper tool for Wayland compositors
@@ -96,12 +96,12 @@ in
     wl-gammarelay-rs       # A simple program that provides DBus interface to control display temperature and brightness under wayland without flickering
     wl-screenrec           # High performance wlroots screen recording, featuring hardware encoding
     wlay                   # Graphical output management for Wayland
-    wldash                 # Wayland launcher/dashboard
+    # wldash                 # Wayland launcher/dashboard
     wlogout                # A wayland based logout menu
     wlr-randr              # An xrandr clone for wlroots compositors
     wlroots                # A modular Wayland compositor library
     wlsunset               # Day/night gamma adjustments for Wayland
-    wlvncc                 # A Wayland Native VNC Client
+    # wlvncc                 # A Wayland Native VNC Client
     wob                    # A lightweight overlay bar for Wayland
     # wofi                   # A launcher/menu program for wlroots based wayland compositors such as sway
     wshowkeys              # Displays keys being pressed on a Wayland session
