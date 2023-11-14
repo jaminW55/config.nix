@@ -48,6 +48,20 @@
     };
   };
 
+  # XDG Portal Settings
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ 
+      pkgs.xdg-desktop-portal-gtk 
+      ];
+  };
+
+  # Environment Variables
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1"; # If your cursor becomes invisible
+    NIXOS_OZONE_WL = "1";          # Allows electron apps to use Wayland
+  };
+
   # SSH Daemon
   services.openssh.enable = true;
 
