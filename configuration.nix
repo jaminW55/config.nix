@@ -16,12 +16,12 @@
       aagl-gtk-on-nix.module
     ];
 
-  # Nix package manager settings
-  nix.settings = { 
-    # Cache settings to speed up build processes and binary package downloads
-    substituters = [ "https://ezkea.cachix.org" "https://hyprland.cachix.org" ];
-    trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-  };
+  # Nix package manager settings -- if you will not use the flake, be certain to uncomment this section -- there is no hyprland module currently, that is flake only -- so you will need to make yourself
+  # nix.settings = { 
+  #  # Cache settings to speed up build processes and binary package downloads
+  #  substituters = [ "https://ezkea.cachix.org" "https://hyprland.cachix.org" ];
+  #  trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
+  #};
 
   # Bootloader Configuration
   boot.loader.systemd-boot.enable = true;  # Use systemd-boot as the bootloader
