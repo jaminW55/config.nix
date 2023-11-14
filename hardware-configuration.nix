@@ -27,7 +27,7 @@
       fsType = "vfat";
     };
 
-  fileSystems."/run/media/wellerbp/Storage" =
+  fileSystems."/run/media/$User/Storage" =
     { device = "/dev/disk/by-uuid/f943ef2a-4b7b-4c4f-938c-a258c61b0003";
       fsType = "ext4";
     };
