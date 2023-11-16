@@ -35,7 +35,6 @@
       {
         # Define NixOS configurations for available hosts
         nixosConfigurations.AMDnixOS = nixpkgs.lib.nixosSystem {
-          inherit system pkgs;
           modules = [
             # NixOS Module Paths
             ./hardware-configuration.nix        # Hardware Settings
