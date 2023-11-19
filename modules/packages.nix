@@ -51,7 +51,7 @@ in
     aml                    # Another main loop
     cage                   # A Wayland kiosk that runs a single, maximized application
     drm_info               # Small utility to dump info about DRM devices
-    # dunst                  # Lightweight and customizable notification daemon
+    dunst                  # Lightweight and customizable notification daemon
     # eww                    # ElKowars wacky widgets
     # eww-wayland            # ElKowars wacky widgets
     # foot                   # A fast, lightweight and minimalistic Wayland terminal emulator
@@ -67,7 +67,7 @@ in
     lavalauncher           # A simple launcher panel for Wayland desktops
     libnotify              # A library that sends desktop notifications to a notification daemon
     libvncserver_master    # VNC server library
-    mako                   # A lightweight Wayland notification daemon
+    # mako                   # A lightweight Wayland notification daemon
     neatvnc                # A VNC server library
     new-wayland-protocols  # Wayland protocol extensions
     obs-wlrobs             # An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
