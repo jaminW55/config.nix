@@ -27,6 +27,9 @@
     xwayland.enable = true;
   };
 
+  # Enable Nix Flakes
+  nix.extraOptions = "experimental-features = nix-command flakes";
+
   # ... any other program configurations ...
   
 }
