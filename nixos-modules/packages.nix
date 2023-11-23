@@ -50,6 +50,7 @@ in
     # Wayland Packages
     aml                    # Another main loop
     cage                   # A Wayland kiosk that runs a single, maximized application
+    cliphist               # A Wayland Clipboard Manager
     drm_info               # Small utility to dump info about DRM devices
     dunst                  # Lightweight and customizable notification daemon
     # eww                    # ElKowars wacky widgets
