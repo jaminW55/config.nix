@@ -108,5 +108,6 @@ in
     wshowkeys              # Displays keys being pressed on a Wayland session
     wtype                  # xdotool type for wayland
     xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
+    xdg-utils              # xdg application integration for desktop environment -- for cliphist
   ];
 }
