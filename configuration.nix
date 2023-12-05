@@ -17,7 +17,8 @@
   # Nix Store & Package Management
   nix.settings = {
     substituters = [ 
-        "https://ezkea.cachix.org" "https://ai.cachix.org" 
+        "https://ezkea.cachix.org" 
+        "https://ai.cachix.org" 
         "https://hyprland.cachix.org" 
     ];
     trusted-public-keys = [ 
