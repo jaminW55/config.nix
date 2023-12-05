@@ -12,33 +12,33 @@
       ./nixos-modules/users.nix           # User account definitions
     ];
 
-  # Nix Store & Package Management
-  nix.settings = {
-    substituters = [ 
-        "https://ezkea.cachix.org" 
-        "https://ai.cachix.org" 
-        "https://hyprland.cachix.org" 
-    ];
-    trusted-public-keys = [ 
-        "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" 
-        "ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc=" 
-        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" 
-    ];
-    auto-optimise-store = true;
-    experimental-features = ["nix-command" "flakes"]; # Enable Nix Flakes
-  };
-  nix = {
-    optimise.automatic = true; # Automatically Optimise Nix Store on each build
+   nix = {
+    # Nix Store & Package Management
+    settings = {
+      substituters = [ 
+          "https://ezkea.cachix.org" 
+          "https://ai.cachix.org" 
+          "https://hyprland.cachix.org" 
+      ];
+      trusted-public-keys = [ 
+          "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" 
+          "ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc=" 
+          "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" 
+      ];
+      auto-optimise-store = true;
+      experimental-features = ["nix-command" "flakes"]; # Enable Nix Flakes
+    };
+    # Optimization and Garbage Collection
+    optimise.automatic = true; # Automatically Optimise Nix Store on Build
     gc = {
       automatic = true;
       dates = "Friday 12:00";
       options = "--delete-older-than 7d";
     };
-  }; 
+  };
   nixpkgs.config = {
     allowUnfree = true;                                  # Allow the installation of unfree packages not included in the open-source license
     enableParallelBuildingByDefault = true;              # Enable parallel building
-    allowAliases = true;                                 # Enable old attribute names for compatibility
     rocmSupport = true;                                  # Enable ROCm support for AMD GPUs
     # cudaSupport = true;                                # Enable CUDA Support for Nvidia GPUs
   };
