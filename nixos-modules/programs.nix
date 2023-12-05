@@ -7,16 +7,16 @@ in
 {
 
   # Special Program Enablement
-  programs.dconf.enable = true; # dconf Editor
-  programs.gamemode.enable = true; # GameMode
-  programs.partition-manager.enable = true; # Partition Manager
-  programs.fish.enable = true; # Fish Shell
+  programs.dconf.enable = true;                                         # dconf Editor
+  programs.gamemode.enable = true;                                      # GameMode
+  programs.partition-manager.enable = true;                             # Partition Manager
+  programs.fish.enable = true;                                          # Fish Shell
 
   # Steam Program Settings
   programs.steam = { 
     # Configuration for the Steam Program
     enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    remotePlay.openFirewall = true;                                     # Open ports in the firewall for Steam Remote Play
   };
   
   # AAGL Related Programs ( true = enable; false = disable)
@@ -30,10 +30,8 @@ in
   # Hyprland Program Settings
   programs.hyprland = {
     enable = true;
-    nvidiaPatches = false; # Switch to true if using Nvidia
+    nvidiaPatches = false;                                             # Switch to true if using Nvidia
     xwayland.enable = true;
   };
-
-  # ... any other program configurations ...
   
 }
