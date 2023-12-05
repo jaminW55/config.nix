@@ -35,13 +35,13 @@
     enable = true; # Enable X11 windowing system for fallback or X11 applications
     layout = "us"; # Keyboard layout for X11 sessions
     xkbVariant = ""; # Keyboard variant for X11 sessions
-    displayManager = {
-      sddm.enable = true; # Plasma Enable 
+  #  displayManager = {
+  #    sddm.enable = true; # Plasma Enable 
   #    gdm.enable = false; # Gnome Enable
   #    defaultSession = ""; # "gnome-xorg" for X11 ; "gnome" for Wayland
     };
     desktopManager = {
-      plasma5.enable = true; # Enable KDE Plasma
+  #    plasma5.enable = true; # Enable KDE Plasma
   #    plasma5.wayland = true; # Enable X12 Support for Plasma
   #    gnome3.enable = false; # Enable GNOME
   #    gnome3.wayland = true; # Enable X12 Support for GNOME
