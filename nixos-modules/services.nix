@@ -31,10 +31,10 @@
 
   # Desktop Environments and Display Managers
   # Plasma KDE
-  services.xserver = {
-    enable = true; # Enable X11 windowing system for fallback or X11 applications
-    layout = "us"; # Keyboard layout for X11 sessions
-    xkbVariant = ""; # Keyboard variant for X11 sessions
+  #services.xserver = {
+  #  enable = true; # Enable X11 windowing system for fallback or X11 applications
+  #  layout = "us"; # Keyboard layout for X11 sessions
+  #  xkbVariant = ""; # Keyboard variant for X11 sessions
   #  displayManager = {
   #    sddm.enable = true; # Plasma Enable 
   #    gdm.enable = false; # Gnome Enable
@@ -45,8 +45,8 @@
   #    plasma5.wayland = true; # Enable X12 Support for Plasma
   #    gnome3.enable = false; # Enable GNOME
   #    gnome3.wayland = true; # Enable X12 Support for GNOME
-    };
-  };
+  #  };
+  #};
 
   # XDG Portal Settings
   xdg.portal = {
