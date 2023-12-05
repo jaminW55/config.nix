@@ -14,13 +14,6 @@
       ./nixos-modules/users.nix           # User account definitions
     ];
 
-  # Nix package manager settings
-   nix.settings = { 
-    # Cache settings to speed up build processes and binary package downloads
-    substituters = [ "https://ezkea.cachix.org" "https://hyprland.cachix.org" ];
-    trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-  };
-
   # Bootloader Configuration
   boot.loader.systemd-boot.enable = true;  # Use systemd-boot as the bootloader
   boot.loader.efi.canTouchEfiVariables = true;  # Allow bootloader to modify EFI variables
