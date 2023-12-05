@@ -47,12 +47,14 @@
   services.openssh.enable = true;
 
   # Docker Configuration
-  virtualisation.docker = {
-    enable = true;
-    storageDriver = "overlay2"; # 'overlay2' for systemd; 'btrfs' for btrfs
-    rootless = {
+  virtualisation = {
+    docker = {
       enable = true;
-      setSocketVariable = true; # Set DOCKER_HOST for rootless Docker
+      storageDriver = "overlay2"; # 'overlay2' for systemd; 'btrfs' for btrfs
+      rootless = {
+        enable = true;
+        setSocketVariable = true; # Set DOCKER_HOST for rootless Docker
+      };
     };
   };
 
