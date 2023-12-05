@@ -4,8 +4,6 @@ let
   # Import external package sets
   aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
   japanesePackages = import (builtins.fetchTarball "https://github.com/jaminW55/japanese-packages/archive/main.tar.gz");
-  # Local packages (assuming you have these nix expressions locally and want to include them)
-  # manjiDict = pkgs.callPackage "/home/wellerbp/Documents/Nix Packages/Manji Dict/manjiDict.nix" {};
 in
 {
   # System-wide packages
