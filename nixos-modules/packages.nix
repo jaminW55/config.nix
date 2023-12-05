@@ -1,11 +1,5 @@
-{ pkgs }:
+{ pkgs, ... }:
 
-let
-  # Import external package sets
-  aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
-  japanesePackages = import (builtins.fetchTarball "https://github.com/jaminW55/japanese-packages/archive/main.tar.gz");
-in
-{
   # System-wide packages
   environment.systemPackages = with pkgs; [
     # System utilities
