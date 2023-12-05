@@ -1,5 +1,6 @@
 { pkgs, ... }:
 
+{
   # System-wide packages
   environment.systemPackages = with pkgs; [
     # System utilities
