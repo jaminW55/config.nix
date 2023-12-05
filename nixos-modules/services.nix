@@ -39,8 +39,8 @@
   #    sddm.enable = true; # Plasma Enable 
   #    gdm.enable = false; # Gnome Enable
   #    defaultSession = ""; # "gnome-xorg" for X11 ; "gnome" for Wayland
-    };
-    desktopManager = {
+  #  };
+  #  desktopManager = {
   #    plasma5.enable = true; # Enable KDE Plasma
   #    plasma5.wayland = true; # Enable X12 Support for Plasma
   #    gnome3.enable = false; # Enable GNOME
