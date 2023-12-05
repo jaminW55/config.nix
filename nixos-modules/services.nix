@@ -29,25 +29,6 @@
     jack.enable = true;
   };
 
-  # Desktop Environments and Display Managers
-  # Plasma KDE
-  #services.xserver = {
-  #  enable = true; # Enable X11 Support, Required for XWayland
-  #  layout = "us"; # Keyboard layout for X11 Sessions & XWayland Sessions
-  #  xkbVariant = ""; # Keyboard variant for X11 Sessions & XWayland Sessions
-  #  displayManager = {
-  #    sddm.enable = true; # Plasma Enable 
-  #    gdm.enable = false; # Gnome Enable
-  #    defaultSession = ""; # "gnome-xorg" for X11 ; "gnome" for Wayland
-  #  };
-  #  desktopManager = {
-  #    plasma5.enable = true; # Enable KDE Plasma
-  #    plasma5.wayland = true; # Enable X12 Support for Plasma
-  #    gnome3.enable = false; # Enable GNOME
-  #    gnome3.wayland = true; # Enable X12 Support for GNOME
-  #  };
-  #};
-
   # XDG Portal Settings
   xdg.portal = {
     enable = true;
@@ -75,13 +56,27 @@
     };
   };
 
+  ## Currently Disabled Services
 
-  # Users and groups can also be managed here if related to services,like adding users to the Docker group, etc.
-
-  # Define any additional services here.
-  #
-
-  # Services Disabled
   services.flatpak.enable = false;
+
+  # Desktop Environments and Display Managers
+  # Plasma KDE
+  #services.xserver = {
+  #  enable = true; # Enable X11 Support, Required for XWayland
+  #  layout = "us"; # Keyboard layout for X11 Sessions & XWayland Sessions
+  #  xkbVariant = ""; # Keyboard variant for X11 Sessions & XWayland Sessions
+  #  displayManager = {
+  #    sddm.enable = true; # Plasma Enable 
+  #    gdm.enable = false; # Gnome Enable
+  #    defaultSession = ""; # "gnome-xorg" for X11 ; "gnome" for Wayland
+  #  };
+  #  desktopManager = {
+  #    plasma5.enable = true; # Enable KDE Plasma
+  #    plasma5.wayland = true; # Enable X12 Support for Plasma
+  #    gnome3.enable = false; # Enable GNOME
+  #    gnome3.wayland = true; # Enable X12 Support for GNOME
+  #  };
+  #};
 
 }
