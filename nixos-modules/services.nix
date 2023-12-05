@@ -32,9 +32,9 @@
   # Desktop Environments and Display Managers
   # Plasma KDE
   #services.xserver = {
-  #  enable = true; # Enable X11 windowing system for fallback or X11 applications
-  #  layout = "us"; # Keyboard layout for X11 sessions
-  #  xkbVariant = ""; # Keyboard variant for X11 sessions
+  #  enable = true; # Enable X11 Support, Required for XWayland
+  #  layout = "us"; # Keyboard layout for X11 Sessions & XWayland Sessions
+  #  xkbVariant = ""; # Keyboard variant for X11 Sessions & XWayland Sessions
   #  displayManager = {
   #    sddm.enable = true; # Plasma Enable 
   #    gdm.enable = false; # Gnome Enable
