@@ -18,17 +18,10 @@
     mesa
     neofetch
     nodejs # Docker Support; Java Framework Support
-    nvd
-    nvtop-amd
     obs-studio
     obsidian
     onlyoffice-bin
     pciutils
-    python310 
-    python310Packages.pip
-    python310Packages.virtualenv
-    shortwave
-    spotify
     telegram-desktop
     thunderbird
     unrar
