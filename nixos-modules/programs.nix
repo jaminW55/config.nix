@@ -6,6 +6,22 @@ let
 in
 {
 
+  # Nix Store Management
+  nix.settings = {
+    substituters = [ "https://ezkea.cachix.org" "https://ai.cachix.org" ];
+    trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" "ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc=" ];
+    auto-optimise-store = true;
+    experimental-features = ["nix-command" "flakes"]; # Enable Nix Flakes
+  };
+  nix = {
+    optimise.automatic = true; # Automatically Optimise Nix Store on each build
+    gc = {
+      automatic = true;
+      dates = "Friday 12:00";
+      options = "--delete-older-than 7d";
+    };
+  }; 
+
   # Special Program Enablement
   programs.dconf.enable = true; # dconf Editor
   programs.gamemode.enable = true; # GameMode
@@ -33,9 +49,6 @@ in
     nvidiaPatches = false; # Switch to true if using Nvidia
     xwayland.enable = true;
   };
-
-  # Enable Nix Flakes
-  nix.extraOptions = "experimental-features = nix-command flakes";
 
   # ... any other program configurations ...
   
