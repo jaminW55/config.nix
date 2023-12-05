@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
+let
+  # Import AAGL Nix Modules
+  aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
+in
 {
+
   # Special Program Enablement
   programs.dconf.enable = true; # dconf Editor
   programs.gamemode.enable = true; # GameMode
@@ -15,6 +20,8 @@
   };
   
   # AAGL Related Programs ( true = enable; false = disable)
+  imports = 
+    [ aagl-gtk-on-nix.module ]; 
   programs.anime-game-launcher.enable = true;
   programs.anime-borb-launcher.enable = false;
   programs.honkers-railway-launcher.enable = true;
