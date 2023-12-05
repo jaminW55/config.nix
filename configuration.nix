@@ -35,7 +35,13 @@
       options = "--delete-older-than 7d";
     };
   }; 
-  nixpkgs.config.allowUnfree = true; # Allow the installation of unfree packages not included in the open-source license
+  nixpkgs.config = {
+    allowUnfree = true;                                  # Allow the installation of unfree packages not included in the open-source license
+    enableParallelBuildingByDefault = true;              # Enable parallel building
+    allowAliases = true;                                 # Enable old attribute names for compatibility
+    rocmSupport = true;                                  # Enable ROCm support for AMD GPUs
+    # cudaSupport = true;                                # Enable CUDA Support for Nvidia GPUs
+  };
 
   # Bootloader Configuration
   boot.loader.systemd-boot.enable = true;  # Use systemd-boot as the bootloader
