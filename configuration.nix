@@ -12,8 +12,6 @@
       ./nixos-modules/programs.nix        # Program configurations
       ./nixos-modules/services.nix        # Service configurations
       ./nixos-modules/users.nix           # User account definitions
-      # AAGL Launcher Module
-      aagl-gtk-on-nix.module
     ];
 
   # Nix package manager settings
