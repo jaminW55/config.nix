@@ -38,16 +38,38 @@
 
   # Font configuration
   fonts = {
-    enableFontDir = true;
-    fonts = with pkgs; [
+    packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
       noto-fonts-emoji
-      liberation_ttf
-      source-han-sans-japanese
-      source-han-serif-japanese
-      source-han-sans
-      source-han-serif
+      migu # Japanese font fix within programs
     ];
+    # Enable the system-wide directory for fonts
+    fontDir.enable = true;
+    # Custom font configuration
+    # This block configures the font settings specifically for the Steam application. 
+    # It sets the 'Migu 1P' font for Steam, particularly for the 'steamwebhelper' process, ensuring that Steam displays text using this font instead of the default sans-serif font.
+    fontconfig = {
+      localConf = ''
+        <?xml version="1.0"?>
+        <!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+        <fontconfig>
+          <description>Change default fonts for Steam client</description>
+          <match>
+            <test name="prgname">
+              <string>steamwebhelper</string>
+            </test>
+            <test name="family" qual="any">
+              <string>sans-serif</string>
+            </test>
+            <edit mode="prepend" name="family">
+              <string>Migu 1P</string>
+            </edit>
+          </match>
+        </fontconfig>
+      '';
+      };
   };
 }
