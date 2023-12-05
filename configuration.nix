@@ -14,12 +14,26 @@
       ./nixos-modules/users.nix           # User account definitions
     ];
 
+  # Nix Store & Package Management
+  nix.settings = {
+    substituters = [ "https://ezkea.cachix.org" "https://ai.cachix.org" ];
+    trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" "ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc=" ];
+    auto-optimise-store = true;
+    experimental-features = ["nix-command" "flakes"]; # Enable Nix Flakes
+  };
+  nix = {
+    optimise.automatic = true; # Automatically Optimise Nix Store on each build
+    gc = {
+      automatic = true;
+      dates = "Friday 12:00";
+      options = "--delete-older-than 7d";
+    };
+  }; 
+  nixpkgs.config.allowUnfree = true; # Allow the installation of unfree packages not included in the open-source license
+
   # Bootloader Configuration
   boot.loader.systemd-boot.enable = true;  # Use systemd-boot as the bootloader
   boot.loader.efi.canTouchEfiVariables = true;  # Allow bootloader to modify EFI variables
-
-  # Allow the installation of unfree packages not included in the open-source license
-  nixpkgs.config.allowUnfree = true;
 
   # This value determines the NixOS release from which the default settings for stateful data, like file locations and database versions on your system were taken.
   # It‘s perfectly fine and recommended to leave this value at the release version of the first install of this system.
