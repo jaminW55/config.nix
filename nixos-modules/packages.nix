@@ -3,35 +3,47 @@
 {
   # System-wide packages
   environment.systemPackages = with pkgs; [
-    # System utilities
-    alsa-utils
-    btop
-    deluge
-    direnv # vscode extension
-    firefox
-    fish
-    gimp
-    git
-    glib
-    gnutls
-    kate
-    mangohud
-    mesa
-    neofetch
-    nodejs # Docker Support; Java Framework Support
-    obs-studio
-    obsidian
-    onlyoffice-bin
-    pciutils
-    telegram-desktop
-    thunderbird
-    unrar
-    vim
-    vlc
-    vscode # General Code Writer; Configuration Management; Docker Support
-    xdg-user-dirs
-    # xorg.xhost
-    yarn # Docker Support; Java Dependency Manager
+    # Development Tools and Utilities
+    direnv # Extension for VSCode, Manages Project Specific Environment Variables
+    gimp     # GNU Image Manipulation Program
+    git # Version control system
+    kate # KDE Advanced Text Editor
+    neofetch # Command-line system information tool
+    nodejs # JavaScript runtime for server-side scripting
+    obs-studio # Open Broadcaster Software for video recording and live streaming
+    vim # Highly configurable text editor
+    vscode # Visual Studio Code, an IDE for software development
+    yarn # Dependency management for JavaScript
+
+    # System and Network Utilities
+    alsa-utils             # Utilities for configuring and using ALSA (Advanced Linux Sound Architecture)
+    btop                   # Resource monitor with an interactive interface
+    glib                   # Low-level core library for GNOME
+    gnutls                 # Secure communications library
+    pciutils               # Utilities for inspecting and manipulating devices connected via PCI
+    xdg-user-dirs          # Manages well known user directories like Desktop, Documents, etc.
+    # xorg.xhost             # Server access control program for X
+
+    # Multimedia and Graphics
+    obsidian               # Note-taking and knowledge base application
+    vlc                    # Media player for various audio and video formats
+
+    # Internet and Communication
+    deluge                 # BitTorrent client
+    firefox                
+    telegram-desktop       
+    thunderbird            
+
+    # Office and Productivity
+    onlyoffice-bin         # Office suite for document editing
+
+    # Gaming and Performance
+    mangohud               # Game Overlay for monitoring FPS, temperatures, and other system stats
+    mesa                   # Open-source implementation of OpenGL/Vulkan
+
+    # Miscellaneous
+    fish                   # Based Shell Program
+    unrar                  # Utility RAR Interactions
 
     # Wayland Packages
     aml                    # Another main loop
