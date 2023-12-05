@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  japanesePackages = import (builtins.fetchTarball "https://github.com/jaminW55/japanese-packages/archive/main.tar.gz");
+in
 { 
   users.users.$User = {
       isNormalUser = true;
