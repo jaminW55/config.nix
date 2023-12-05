@@ -16,8 +16,15 @@
 
   # Nix Store & Package Management
   nix.settings = {
-    substituters = [ "https://ezkea.cachix.org" "https://ai.cachix.org" ];
-    trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" "ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc=" ];
+    substituters = [ 
+        "https://ezkea.cachix.org" "https://ai.cachix.org" 
+        "https://hyprland.cachix.org" 
+    ];
+    trusted-public-keys = [ 
+        "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" 
+        "ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc=" 
+        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" 
+    ];
     auto-optimise-store = true;
     experimental-features = ["nix-command" "flakes"]; # Enable Nix Flakes
   };
