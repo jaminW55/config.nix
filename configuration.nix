@@ -17,11 +17,13 @@
     settings = {
       substituters = [ 
           "https://ezkea.cachix.org" 
+          "https://cache.nixos.org" 
           "https://ai.cachix.org" 
           "https://hyprland.cachix.org" 
       ];
       trusted-public-keys = [ 
           "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" 
+          "cache.nixos.org-1:6NCHdD59X431o0gWypbOdQjF2c/64Kyli4Wb6KpZ/jY=" 
           "ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc=" 
           "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" 
       ];
@@ -38,9 +40,9 @@
   };
   nixpkgs.config = {
     allowUnfree = true;                                  # Allow the installation of unfree packages not included in the open-source license
-    enableParallelBuildingByDefault = true;              # Enable parallel building
-    rocmSupport = true;                                  # Enable ROCm support for AMD GPUs
-    # cudaSupport = true;                                # Enable CUDA Support for Nvidia GPUs
+    # enableParallelBuildingByDefault = true;              # Enable parallel building
+    # rocmSupport = true;                                  # Enable ROCm support for AMD GPUs
+    # cudaSupport = true;                                  # Enable CUDA Support for Nvidia GPUs
   };
 
   # Bootloader Configuration
