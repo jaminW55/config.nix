@@ -39,12 +39,13 @@
   # Font configuration
   fonts = {
     packages = with pkgs; [
+      migu # Japanese font fix within programs
+      nerdfonts
       noto-fonts
       noto-fonts-cjk
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-emoji
-      migu # Japanese font fix within programs
     ];
     # Enable the system-wide directory for fonts
     fontDir.enable = true;
