@@ -4,10 +4,10 @@ let
   japanesePackages = import (builtins.fetchTarball "https://github.com/jaminW55/japanese-packages/archive/main.tar.gz");
 in
 { 
-  users.users.$User = {
+  users.users.wellerbp = {
       isNormalUser = true;
-      description = "$User Name";
-      home = "/home/$User";
+      description = "Ben Weller";
+      home = "/home/wellerbp";
       shell = pkgs.fish;
       extraGroups = [ "wheel" "networkmanager" "docker" ]; # Additional groups for the user
       # User-specific packages can also be managed here, if necessary
@@ -17,13 +17,13 @@ in
         discord
         japanesePackages.gazou
         japanesePackages.tachidesk
-        kommiku
+        komikku
         lutris
         obsidian
         protonup-qt
         ryujinx
         thunderbird
-        wine trucks
+        winetricks
         wineWowPackages.stable
         xivlauncher
         yuzu-mainline
