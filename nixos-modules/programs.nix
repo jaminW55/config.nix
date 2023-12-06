@@ -10,7 +10,10 @@ in
   programs.dconf.enable = true;                                         # dconf Editor
   programs.gamemode.enable = true;                                      # GameMode
   programs.partition-manager.enable = true;                             # Partition Manager
-  programs.fish.enable = true;                                          # Fish Shell
+  programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;                                         # Nix Shell and Environment Direnv Management
+  };
 
   # Steam Program Settings
   programs.steam = { 
@@ -26,6 +29,22 @@ in
   programs.anime-borb-launcher.enable = false;
   programs.honkers-railway-launcher.enable = true;
   programs.honkers-launcher.enable = false;
+
+  # Shell Related
+  programs = {
+    fish.enable = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;                                             # Set Neovim as Default $EDITOR
+      vimAlias = true;
+    };
+    git = {
+      enable = true;
+      lfs = {
+        enable = true;
+      };
+    };
+  };
 
   # Hyprland Program Settings
   programs.hyprland = {
