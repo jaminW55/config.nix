@@ -4,16 +4,14 @@
   # System-wide packages
   environment.systemPackages = with pkgs; [
     # Development Tools and Utilities
-    direnv # Extension for VSCode, Manages Project Specific Environment Variables
-    gimp     # GNU Image Manipulation Program
-    git # Version control system
-    kate # KDE Advanced Text Editor
-    neofetch # Command-line system information tool
-    nodejs # JavaScript runtime for server-side scripting
-    obs-studio # Open Broadcaster Software for video recording and live streaming
-    vim # Highly configurable text editor
-    vscode # Visual Studio Code, an IDE for software development
-    yarn # Dependency management for JavaScript
+    gimp                   # GNU Image Manipulation Program
+    git                    # Version control system
+    kate                   # KDE Advanced Text Editor
+    nodejs                 # JavaScript runtime for server-side scripting
+    obs-studio             # Open Broadcaster Software for video recording and live streaming
+    vim                    # Highly configurable text editor
+    vscode                 # Visual Studio Code, an IDE for software development
+    yarn                   # Dependency management for JavaScript
 
     # System and Network Utilities
     alsa-utils             # Utilities for configuring and using ALSA (Advanced Linux Sound Architecture)
@@ -42,8 +40,13 @@
     mesa                   # Open-source implementation of OpenGL/Vulkan
 
     # Miscellaneous
-    fish                   # Based Shell Program
     unrar                  # Utility RAR Interactions
+
+    # KDE Packages
+    libsForQt5.ark
+    libsForQt5.kcalc
+    libsForQt5.kdeconnect-kde
+    libsForQt5.qt5ct       # KDE Connect Support
 
     # Wayland Packages
     aml                    # Another main loop
@@ -71,7 +74,7 @@
     new-wayland-protocols  # Wayland protocol extensions
     obs-wlrobs             # An obs-studio plugin that allows you to screen capture on wlroots based wayland compositors
     rootbar                # A bar for Wayland WMs
-    rofi-wayland           # Window switcher, run dialog and dmenu replacement for Wayland
+    # rofi-wayland           # Window switcher, run dialog and dmenu replacement for Wayland
     # salut                  # A sleek notification daemon
     # shotman                # The uncompromising screenshot GUI for Wayland compositors
     # sirula                 # Simple app launcher for wayland written in rust
@@ -102,7 +105,7 @@
     wlsunset               # Day/night gamma adjustments for Wayland
     # wlvncc                 # A Wayland Native VNC Client
     wob                    # A lightweight overlay bar for Wayland
-    # wofi                   # A launcher/menu program for wlroots based wayland compositors such as sway
+    wofi                   # A launcher/menu program for wlroots based wayland compositors such as sway
     wshowkeys              # Displays keys being pressed on a Wayland session
     wtype                  # xdotool type for wayland
     xdg-desktop-portal-wlr # xdg-desktop-portal backend for wlroots
