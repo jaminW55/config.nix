@@ -17,9 +17,9 @@ in
 
   # Steam Program Settings
   programs.steam = { 
-    # Configuration for the Steam Program
     enable = true;
     remotePlay.openFirewall = true;                                     # Open ports in the firewall for Steam Remote Play
+    #dedicatedServer.openFirewall = true;                               # Allow the running of dedicated servers within Steam
   };
   
   # AAGL Related Programs ( true = enable; false = disable)
